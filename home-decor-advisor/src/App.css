@@ -1,0 +1,120 @@
+:root {
+  --primary-color: #2c3e50;
+  --secondary-color: #34495e;
+  --accent-color: #3498db;
+  --text-color: #2c3e50;
+  --text-light: #7f8c8d;
+  --background-color: #f8f9fa;
+  --card-background: #ffffff;
+  --shadow-color: rgba(0, 0, 0, 0.08);
+  --input-background: #ffffff;
+  --border-color: #e0e0e0;
+  --gradient-start: #2c3e50;
+  --gradient-end: #3498db;
+  --button-text: #ffffff;
+  --button-hover: #2980b9;
+  --card-hover-shadow: rgba(0, 0, 0, 0.12);
+}
+
+.dark-mode {
+  --primary-color: #ecf0f1;
+  --secondary-color: #bdc3c7;
+  --accent-color: #3498db;
+  --text-color: #ecf0f1;
+  --text-light: #bdc3c7;
+  --background-color: #1a1a1a;
+  --card-background: #2c3e50;
+  --shadow-color: rgba(0, 0, 0, 0.2);
+  --input-background: #34495e;
+  --border-color: #404040;
+  --gradient-start: #2c3e50;
+  --gradient-end: #3498db;
+  --button-text: #ffffff;
+  --button-hover: #2980b9;
+  --card-hover-shadow: rgba(0, 0, 0, 0.3);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: all 0.3s ease;
+  line-height: 1.6;
+}
+
+.app {
+  min-height: 100vh;
+  padding: 2rem;
+  background-color: var(--background-color);
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  margin-bottom: 2rem;
+  background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+  border-radius: 12px;
+  box-shadow: 0 4px 20px var(--shadow-color);
+  transition: all 0.3s ease;
+}
+
+.app-header:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px var(--shadow-color);
+}
+
+.app-header h1 {
+  font-size: 2.2rem;
+  color: white;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.app-main {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.content-container {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+  transition: all 0.3s ease;
+}
+
+.left-section,
+.right-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 1024px) {
+  .content-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .app {
+    padding: 1rem;
+  }
+
+  .app-header {
+    padding: 1.2rem 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .app-header h1 {
+    font-size: 1.8rem;
+  }
+}
